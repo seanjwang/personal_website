@@ -115,28 +115,38 @@ body, html {
     </div>
 </header>
 
-<div class="w3-content" style="padding:128px 16px" id="about">
+<div class="w3-content w3-row" style="padding:64px 16px; min-height: 100%" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p>I am a Mechanical Engineering PhD student at Carnegie Mellon University. I am advised by Aaron Johnson and work in the RoboMechanics Lab. I am interested in getting robots out of the lab setting and into the real world to perform useful tasks. My research is current focused on creating autonomous controllers to drive wheeled robots over rough terrain, i.e. environments with rocks, stairs, or loose soil. I also research using robots for environmental sampling. This project involves designing robots that can travel to remote locations, collect soil samples, and sense contaminants in the soil. It also involves creating planning algorithms to decide where the robot should sample for efficient operation.</p>
-  <p>Prior to my PhD, I was an undergradate researcher at the at University of California, Santa Barbara, working with Professor Francesco Bullo. My reserach focus was on path planning for single and multi agent surveillance UAV systems. I was awarded the "" for my undergraduate research.</p>
-  <a href="CV.pdf">Curriculum Vitae</a>
+  <div class="w3-threequarter w3-container" style="text-align: justify;text-justify: inter-word;">
+    <p>I am a Mechanical Engineering PhD student at Carnegie Mellon University. I am advised by Aaron Johnson and work in the RoboMechanics Lab. I am interested in getting robots out of the lab setting and into the real world to perform useful tasks. My research is currently focused on creating sample efficient reinforcement learning algorithms to autonomously drive wheeled robots over 
+    extreme rough terrain, i.e. environments with rocks, stairs, or loose soil. I am also working on an environmental sampling project that involves desigining and programming robots to autonomously collect soil samples and sense soil contaminants from large remote environments.</p>
+
+    <p> I received my bachelor's and master's degree in mechanical engineering at the University of California, Santa Barbara. During my time at UC Santa Barbara, I work with Professor Francesco bullo on motion planning of single and multi agent surveillance UAV systems.</p>
+    <p ><a href="CV.pdf">Curriculum Vitae</a></p>
+  </div>
+  <div class="w3-rest w3-container">
+    <p class="w3-center">
+      <img src="about_me.jpg" style="width: 100%; max-width: 190px">
+      <br>When I'm not training robots, I'm training my dog "Mija".
+    </p>
+  </div>
 </div>
 
 <!-- Projects Section -->
-<div class="w3-container" style="padding:128px 1px" id="projects">
+<div class="w3-container" style="padding:64px 16px; min-height: 100%" id="projects">
   <h3 class="w3-center">PROJECTS</h3>
 
   <p class="w3-center w3-large">CURRENT PROJECTS</p>
   <div class="w3-row-padding w3-center" style="margin-top:16px">
 
-    <div class="w3-col l3 m6">
+    <div class="w3-display-container w3-col l3 m6">
       <div class="w3-card-4 w3-hover-opacity" style="height:512px" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Reinforcement Learning for Rough Terrain Traversal</p>
-        <p> We aim to create autonomous controllers capable of navigating a wheel robot over rough terrain, i.e. environments with rocks or stairs. We are developing sample efficient</p>
-        <p>read more >></p>
+        <p class="w3-large">RL for Rough Terrain Traversal</p>
+        <p class="w3-margin" style="text-align: justify;text-justify: inter-word;"> We are developing reinforcement learning algorithms for autonomous driving over rough terrain (environments with rocks, stairs, etc.) We are focused on increasing sample efficiency through domain transfer, intelligent exploration and other methods.</p>
+        <p class="w3-display-bottommiddle">read more>></p>
       </div>
       <!-- Modal for more detail-->
       <div id="modalDRL" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -146,34 +156,18 @@ body, html {
             <source src="drl_rough_terrain.mp4" type="video/mp4">
           </video>
           <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
-          <p> Wheeled roasdfadsfasdfasdfadsf</p><br>
+          <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p><br>
         </div>
       </div>
     </div>
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4" style="height:512px">
+    <div class="w3-display-container w3-col l3 m6">
+      <div class="w3-card-4 w3-hover-opacity" style="height:512px" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
         <p class="w3-large">Soil Sampling Robot Design</p>
-        <p>Robotic soil sampling can help us quantify the extent of contamination in an environment. We are developing robotic sample collection methods and sensors for in-situ measurements of soil contaminant.</p>
-        <p>read more >></p>
+        <p class="w3-margin" style="text-align: justify;text-justify: inter-word;">Robotic soil sampling can help us quantify the extent of contamination in large environments. We are developing robotic sample collection methods and sensors for in-situ measurements of soil contaminant.</p>
+        <p class="w3-display-bottommiddle">read more>></p>
       </div>
     </div>
     <div class="w3-col l3 m6">
@@ -252,13 +246,12 @@ body, html {
 </div>
 
 <!-- Publications Section -->
-<div class="w3-container" style="padding:128px 16px" id="publications">
+<div class="w3-container" style="padding:64px 16px; min-height: 100%" id="publications">
   <h3 class="w3-center">PUBLICATIONS</h3>
-  <p class="w3-center w3-large">Current Projects</p>
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-center w3-light-grey" style="padding:128px 1px" id="contact">
+<div class="w3-container w3-center w3-light-grey" style="padding:64px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Pittsburgh, PA</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (408) 691-5279</p>
