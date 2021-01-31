@@ -52,6 +52,18 @@ body, html {
   background: rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 650px) {
+  .hide_menu_small {
+      display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .show_menu_small {
+      display: none;
+  }
+}
+
 </style>
 <body>
 
@@ -60,22 +72,23 @@ body, html {
   <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide">SEAN J. WANG</a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right hide_menu_small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#projects" class="w3-bar-item w3-button"></i> PROJECTS</a>
       <a href="#publications" class="w3-bar-item w3-button"> PUBLICATIONS</a>
       <a href="#contact" class="w3-bar-item w3-button"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <div class="show_menu_small">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </div>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-right w3-hide-medium w3-hide-large" style="display:none;right:0" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-right show_menu_small" style="display:none;right:0" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
@@ -83,52 +96,22 @@ body, html {
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-<!-- Header with full-height image -->
-<!--<header class="w3-display-container" id="home">
-    <video class=topvideo autoplay playsinline muted loop>
-      <source src="front_video.mp4" type="video/mp4">
-    </video>
-    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-medium w3-hide-small" style="padding:64px 0px">
-      <span style="font-size:71px"><b>SEAN J. WANG</b></span><br>
-      <span style="font-size:24px"><b>Carnegie Mellon University</b></span><br>
-      <span style="font-size:24px"><b>Mechanical Engineering</b></span><br>
-      <span style="font-size:24px"><b>PhD Student</b></span><br>
-    </div>
-    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-large w3-hide-small" style="padding:64px 0px ">
-      <span style="font-size:43px"><b>SEAN J. WANG</b></span><br>
-      <span style="font-size:18px"><b>Carnegie Mellon University</b></span><br>
-      <span style="font-size:18px"><b>Mechanical Engineering</b></span><br>
-      <span style="font-size:18px"><b>PhD Student</b></span><br>
-    </div>
-    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-large w3-hide-medium" style="padding:64px 0px ">
-      <span style="font-size:24px"><b>SEAN J. WANG</b></span><br>
-      <span style="font-size:12px"><b>Carnegie Mellon University</b></span><br>
-      <span style="font-size:12px"><b>Mechanical Engineering</b></span><br>
-      <span style="font-size:12px"><b>PhD Student</b></span><br>
-    </div>
-</header>-->
-
 <header class="video-container" id="home">
   <video autoplay playsinline muted loop>
     <source type="video/mp4" src="front_video.mp4">
   </video>
-  <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-medium w3-hide-small" style="padding:64px 0px">
+  <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-small" style="padding:64px 0px; width:100%;">
       <span style="font-size:71px"><b>SEAN J. WANG</b></span><br>
       <span style="font-size:24px"><b>Carnegie Mellon University</b></span><br>
       <span style="font-size:24px"><b>Mechanical Engineering</b></span><br>
       <span style="font-size:24px"><b>PhD Student</b></span><br>
     </div>
-    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-large w3-hide-small" style="padding:64px 0px ">
-      <span style="font-size:43px"><b>SEAN J. WANG</b></span><br>
-      <span style="font-size:18px"><b>Carnegie Mellon University</b></span><br>
-      <span style="font-size:18px"><b>Mechanical Engineering</b></span><br>
-      <span style="font-size:18px"><b>PhD Student</b></span><br>
-    </div>
-    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-large w3-hide-medium" style="padding:64px 0px ">
-      <span style="font-size:24px"><b>SEAN J. WANG</b></span><br>
-      <span style="font-size:12px"><b>Carnegie Mellon University</b></span><br>
-      <span style="font-size:12px"><b>Mechanical Engineering</b></span><br>
-      <span style="font-size:12px"><b>PhD Student</b></span><br>
+
+    <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-large w3-hide-medium" style="padding:64px 0px; width:100%;">
+      <span style="font-size:36px"><b>SEAN J. WANG</b></span><br>
+      <span style="font-size:16px"><b>Carnegie Mellon University</b></span><br>
+      <span style="font-size:16px"><b>Mechanical Engineering</b></span><br>
+      <span style="font-size:16px"><b>PhD Student</b></span><br>
     </div>
 </header>
 
