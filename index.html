@@ -17,12 +17,6 @@ body, html {
   line-height: 1.8;
 }
 
-.topvideo{
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-}
-
 .video-container {
   position: relative;
   top: 0;
@@ -48,9 +42,6 @@ body, html {
   transform: translate(-50%,-50%);
 }
 
-.shadedBackground {
-  background: rgba(0, 0, 0, 0.5);
-}
 
 @media screen and (max-width: 650px) {
   .hide_menu_small {
@@ -117,7 +108,7 @@ body, html {
 
 <div class="w3-content w3-row" style="padding:64px 16px; min-height: 100%" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <div class="w3-threequarter w3-container" style="text-align: justify;text-justify: inter-word;">
+  <div class="w3-threequarter w3-container w3-justify">
     <p>I am a Mechanical Engineering PhD student at Carnegie Mellon University. I am advised by Aaron Johnson and work in the RoboMechanics Lab. I am interested in getting robots out of the lab setting and into the real world to perform useful tasks. My research is currently focused on creating sample efficient reinforcement learning algorithms to autonomously drive wheeled robots over 
     extreme rough terrain, i.e. environments with rocks, stairs, or loose soil. I am also working on an environmental sampling project that involves desigining and programming robots to autonomously collect soil samples and sense soil contaminants from large remote environments.</p>
 
@@ -135,18 +126,17 @@ body, html {
 <!-- Projects Section -->
 <div class="w3-container" style="padding:64px 16px; min-height: 100%" id="projects">
   <h3 class="w3-center">PROJECTS</h3>
-
   <p class="w3-center w3-large">CURRENT PROJECTS</p>
-  <div class="w3-row-padding w3-center" style="margin-top:16px">
+  <div class="w3-row-padding" style="margin-top:16px">
 
-    <div class="w3-display-container w3-col l3 m6">
-      <div class="w3-card-4 w3-hover-opacity" style="height:512px" onclick="document.getElementById('modalDRL').style.display='block'">
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">RL for Rough Terrain Traversal</p>
-        <p class="w3-margin" style="text-align: justify;text-justify: inter-word;"> We are developing reinforcement learning algorithms for autonomous driving over rough terrain (environments with rocks, stairs, etc.) We are focused on increasing sample efficiency through domain transfer, intelligent exploration and other methods.</p>
-        <p class="w3-display-bottommiddle">read more>></p>
+        <p class="w3-large w3-center">RL for Rough Terrain Traversal</p>
+        <p class="w3-margin w3-justify"> We are developing algorithms to make reinforcement learning more sample-efficient for autonomous driving over rough terrain (terrain with rocks, stairs, etc.)</p>
+        <p class="w3-center"> read more>> </p>
       </div>
       <!-- Modal for more detail-->
       <div id="modalDRL" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -156,90 +146,89 @@ body, html {
             <source src="drl_rough_terrain.mp4" type="video/mp4">
           </video>
           <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
-          <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p><br>
+          <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p>
         </div>
       </div>
     </div>
-    <div class="w3-display-container w3-col l3 m6">
-      <div class="w3-card-4 w3-hover-opacity" style="height:512px" onclick="document.getElementById('modalDRL').style.display='block'">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Soil Sampling Robot Design</p>
-        <p class="w3-margin" style="text-align: justify;text-justify: inter-word;">Robotic soil sampling can help us quantify the extent of contamination in large environments. We are developing robotic sample collection methods and sensors for in-situ measurements of soil contaminant.</p>
-        <p class="w3-display-bottommiddle">read more>></p>
+        <p class="w3-large w3-center">Soil Sampling Robot Design</p>
+        <p class="w3-margin w3-justify"> We are designing and building robots that collect soil samples and measure soil contaminants to help us quantify the extent of contamination in large environments.
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4" style="height:512px">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Planning for Environmental Sampling</p>
-        <p> We aim to increase efficiency of robotic soil sampling in large environments. We are developing algorithms that choose sampling locations which maximize information gain and minimize operation costs.</p>
-        <p>read more >></p>
+        <p class="w3-large w3-center">Planning for Environmental Sampling</p>
+        <p class="w3-margin w3-justify"> We are working on planning algorithms that choose sampling locations in large environments to maximize information gain and minimize operation costs.</p>
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4" style="height:512px">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Rough Terrain Wheeled Robot Design</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large w3-center">Rough Terrain Wheeled Robot Design</p>
+        <p class="w3-margin w3-justify"> We are designing new wheeled robots that can traverse over rougher terrain (rocks, stairs, mud, etc.) and reach more remote locations.</p> 
+        <p class="w3-center">read more>></p>
       </div>
     </div>
   </div>
   <br>
   <p class="w3-center w3-large">PAST PROJECTS</p>
-  <div class="w3-center w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4 w3-hover-opacity" onclick="document.getElementById('modalDRL').style.display='block'">
+  <div class="w3-row-padding" style="margin-top:16px">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Proprioceptive Contact Localization</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        <p>read more >></p>
-      </div>
-      <!-- Modal for more detail-->
-      <div id="modalDRL" class="w3-modal w3-black" onclick="this.style.display='none'">
-        <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-          <video autoplay playsinline muted loop style="width:50%">
-            <source src="drl_rough_terrain_small.mp4" type="video/mp4">
-          </video>
-          <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        </div>
+        <p class="w3-large w3-center">Proprioceptive Contact Localization</p>
+        <p class="w3-margin w3-justify"> We developed a proprioceptive method of contact localization based off velocity constraints. This method only requires position and velocity measurements.</p>
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
 
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4">
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Cloud Supported Multi-Agent Surveillance</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large w3-center"> Multi-Agent Surveillance</p>
+        <p class="w3-margin w3-justify"> We developed an algorithm for complete coverage surveillance by multiple agents that only have sparse communication with a central cloud.</p>
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Isla</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large w3-center"> Isla</p>
+        <p class="w3-margin w3-justify"> We built a quadrupedal robot that can roll on its body using its legs for propulsion. This rolling locomotion is more efficient than walking.</p>
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
-    <div class="w3-col l3 m6">
-      <div class="w3-card-4">
+
+    <div class="w3-col l3 m6" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
           <source src="drl_rough_terrain_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">UAS</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large w3-center"> UAS</p>
+        <p class="w3-margin w3-justify"> We built unmanned aerial system with a thermal camera to find endangered birds and distance sensors (ultrasound and LiDAR) to give the pilot added awareness.</p>
+        <p class="w3-center"> read more>> </p>
       </div>
     </div>
   </div>
