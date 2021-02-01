@@ -151,29 +151,52 @@ body, html {
           <source src="drl_rough_terrain.mp4" type="video/mp4">
         </video>
         <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
-        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p>
+        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches can be used to create good control policies, but often need large amounts of training data. Collecting training data can difficult as it is time consuming and random exploration can lead to extensive robot damage. We aim to improve the sample efficiency of reinforcement learning through use of sim2real domain transfer, intelligent exploration, and other methods.</p>
+        <p> The video above shows rough terrain navigation using model-based reinforcement learning. The robot first trains a dynamics model, then uses it to optimize a trajectory to the goal. Trajectory tracking is done using LQR.</p>
       </div>
     </div>
 
     <div class="w3-col l4 m6" style="height:100%">
-      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalSoilSampling').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
-          <source src="drl_rough_terrain_small.mp4" type="video/mp4">
+          <source src="soilSampling_small.mp4" type="video/mp4">
         </video>
         <p class="w3-large w3-center">Soil Sampling Robot Design</p>
         <p class="w3-margin w3-justify"> We are designing and building robots that collect soil samples and measure soil contaminants to help us quantify the extent of contamination in large environments.</p>
         <p class="w3-center"> more info>> </p>
       </div>
     </div>
+    <!-- Modal for more detail-->
+    <div id="modalSoilSampling" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('rlvideo')">
+      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <video id="rlvideo" autoplay playsinline muted loop style="width:75%">
+          <source src="soilSampling.mp4" type="video/mp4">
+        </video>
+        <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
+        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches can be used to create good control policies, but often need large amounts of training data. Collecting training data can difficult as it is time consuming and random exploration can lead to extensive robot damage. We aim to improve the sample efficiency of reinforcement learning through use of sim2real domain transfer, intelligent exploration, and other methods.</p>
+        <p> The video above shows rough terrain navigation using model-based reinforcement learning. The robot first trains a dynamics model, then uses it to optimize a trajectory to the goal. Trajectory tracking is done using LQR.</p>
+      </div>
+    </div>
 
     <div class="w3-col l4 m6" style="height:100%">
-      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('explorationModal').style.display='block'">
         <video autoplay playsinline muted loop style="width:100%">
-          <source src="drl_rough_terrain_small.mp4" type="video/mp4">
+          <source src="explorationPlanning_small.mp4" type="video/mp4">
         </video>
         <p class="w3-large w3-center">Planning for Environmental Sampling</p>
         <p class="w3-margin w3-justify"> We are working on planning algorithms that choose sampling locations in large environments to maximize information gain and minimize operation costs.</p>
         <p class="w3-center"> more info>> </p>
+      </div>
+    </div>
+    <!-- Modal for more detail-->
+    <div id="explorationModal" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('rlvideo')">
+      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <video id="rlvideo" autoplay playsinline muted loop style="width:75%">
+          <source src="explorationPlanning.mp4" type="video/mp4">
+        </video>
+        <p class="w3-large">Planning for Environmental Sampling</p>
       </div>
     </div>
   </div>
@@ -207,19 +230,8 @@ body, html {
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <iframe id="contactLocVideo" width="560" height="315" src="https://www.youtube.com/embed/zN183Fkj3-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="w3-large">Isla</p>
-        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 s12" style="height:100%">
-      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalDRL').style.display='block'">
-        <video autoplay playsinline muted loop style="width:100%">
-          <source src="planningMulti_small.mp4" type="video/mp4">
-        </video>
-        <p class="w3-large w3-center"> Multi-Agent Surveillance</p>
-        <p class="w3-margin w3-justify"> This project focused on developing path planning algorithms for multi-agent surveillence systems with sparse communication constraints.</p>
-        <p class="w3-center"> more info>> </p>
+        <p class="w3-large">Proprioceptive Contact Localization</p>
+        <p> Read "Contact Localization using Velocity Constraints" in publications section.<p>
       </div>
     </div>
 
@@ -239,7 +251,29 @@ body, html {
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <iframe id='islaVideo'width="560" height="315" src="https://www.youtube.com/embed/AsHWz7wE1Rw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="w3-large">Isla</p>
-        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches </p>
+        <p> Legged robots have the ability to step over obstacles, making them well suited to rough terrain environments. However, they often have limited payload and travel range since their locomotion is less efficient than wheeled locomotion. Isla aims to capture the advantages of both legged and wheeled locomotion. It is able to walk using its legs and step over small obstacles. When efficient locomotion is required, it can roll on its body, using its legs to propel itself.</p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12" style="height:100%">
+      <div class="w3-hover-shadow" style="height:100%" onclick="document.getElementById('modalSurveil').style.display='block'">
+        <video autoplay playsinline muted loop style="width:100%">
+          <source src="planningMulti_small.mp4" type="video/mp4">
+        </video>
+        <p class="w3-large w3-center"> Multi-Agent Surveillance</p>
+        <p class="w3-margin w3-justify"> This project focused on developing path planning algorithms for multi-agent surveillence systems with sparse communication constraints.</p>
+        <p class="w3-center"> more info>> </p>
+      </div>
+    </div>
+    <!-- Modal for more detail-->
+    <div id="modalSurveil" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('maSurveilVideo')">
+      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <video id="maSurveilVideo" autoplay playsinline muted loop style="width:75%">
+          <source src="planningMulti_small.mp4" type="video/mp4">
+        </video>
+        <p class="w3-large">Cloud-supported coverage control for multi-agent surveillence missions</p>
+        <p> Read "Cloud-supported coverage control for persistent surveillance missions" and "Coverage control with anytime updates for persistent surveillance missions" in publications section.<p>
       </div>
     </div>
 
