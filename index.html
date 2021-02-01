@@ -268,7 +268,8 @@ body, html {
 <!-- Publications Section -->
 <div class="w3-container" style="padding:64px 0px; min-height: 100%;" id="publications">
   <h3 class="w3-center">PUBLICATIONS</h3>
-  <script src="https://bibbase.org/show?bib=seanjwang.github.io%2Freferences.bib&jsonp=1"></script>
+  <iframe src="https://bibbase.org/show?bib=seanjwang.github.io%2Freferences.bib" style="width: 100%;"onload="resizeIframe(this)" frameBorder="0"></iframe>
+  <p id="demo"></p>
 </div>
 
 <!-- Contact Section -->
@@ -316,6 +317,13 @@ function resetYouTube(vidID){
   var vidSrc = vidToReset.src;
   vidToReset.src = '';
   vidToReset.src = vidSrc;
+}
+
+function resizeIframe(obj) {
+  obj.style.height = '500px';
+  //var desHeight = obj.contentWindow.document.body.scrollHeight + 80;//obj.contentWindow.document.documentElement.scrollHeight;
+  //obj.style.height = desHeight.toString().concat('px');
+  //obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
 }
 
 </script>
