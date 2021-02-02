@@ -99,7 +99,7 @@ body, html {
   <video autoplay playsinline muted loop>
     <source type="video/mp4" src="front_video.mp4">
   </video>
-  <div class="w3-display-topmiddle w3-center w3-text-white w3-hide-small" style="padding:64px 0px; width:100%;">
+  <div class="w3-animate-top w3-display-topmiddle w3-center w3-text-white w3-hide-small" style="padding:64px 0px; width:100%;">
       <span class="videoText" style="font-size:71px;">SEAN J. WANG</span><br>
       <span class="videoText" style="font-size:24px;">Carnegie Mellon University</span><br>
       <span class="videoText" style="font-size:24px">Mechanical Engineering</span><br>
@@ -123,6 +123,7 @@ body, html {
     <p> I received my bachelor's and master's degree at University of California, Santa Barbara. There, I worked with Professor Francesco Bullo on motion planning for single and multi agent surveillance UAV systems.</p>
 
     <p ><a href="CV.pdf" target="_blank">Curriculum Vitae</a></p>
+
   </div>
   <div class="w3-rest w3-container">
     <p class="w3-center">
@@ -150,7 +151,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="modalDRL" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('rlvideo');">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <video id="rlvideo" playsinline muted loop style="width:75%" preload="none">
           <source src="drl_rough_terrain.mp4" type="video/mp4">
         </video>
@@ -175,7 +176,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="modalSoilSampling" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('soilSamplingVid')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <video id="soilSamplingVid" playsinline muted loop style="width:75%" preload="none">
           <source src="soilSampling.mp4" type="video/mp4">
         </video>
@@ -200,7 +201,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="explorationModal" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('explorationVid')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <video id="explorationVid" playsinline muted loop style="width:75%" preload="none">
           <source src="explorationPlanning.mp4" type="video/mp4">
         </video>
@@ -241,7 +242,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="contactLocModal" class="w3-modal w3-black" onclick="this.style.display='none';resetYouTube('contactLocVideo')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <iframe id="contactLocVideo" width="560" height="315" src="https://www.youtube.com/embed/zN183Fkj3-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="w3-large">Proprioceptive Contact Localization</p>
         <p> Read "Contact Localization using Velocity Constraints" in publications section.</p>
@@ -263,7 +264,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="modalIsla" class="w3-modal w3-black" onclick="this.style.display='none';resetYouTube('islaVideo')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <iframe id='islaVideo'width="560" height="315" src="https://www.youtube.com/embed/AsHWz7wE1Rw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="w3-large">Isla</p>
         <p class="w3-justify"> Legged robots have the ability to step over obstacles, making them well suited to rough terrain environments. However, they often have limited payload and travel range since their locomotion is less efficient than wheeled locomotion. Isla aims to capture the advantages of both legged and wheeled locomotion. It is able to and step over small obstacles. It can also roll on its body for efficient locomotion. </p>
@@ -285,7 +286,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="modalSurveil" class="w3-modal w3-black" onclick="this.style.display='none';resetVideo('maSurveilVideo')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <video id="maSurveilVideo" playsinline muted loop style="width:75%" preload="none">
           <source src="planningMulti_small.mp4" type="video/mp4">
         </video>
@@ -309,7 +310,7 @@ body, html {
     <!-- Modal for more detail-->
     <div id="modalDrone" class="w3-modal w3-black" onclick="this.style.display='none';resetYouTube('aidVideo')">
       <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent" style="padding: 0px 64px">
         <iframe id="aidVideo" width="560" height="315" src="https://www.youtube.com/embed/081Nv4YKfso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="w3-large">Advance Imaging Drone</p>
         <a href="https://capstone.engineering.ucsb.edu/projects/advanced-imaging-drone">More Information</a>
