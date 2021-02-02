@@ -349,7 +349,7 @@ body, html {
     <div style="text-align:center">
       <div class="g-recaptcha" style="display:inline-block;" data-sitekey="6LeuY0caAAAAAC7sGwDPcoevCOEmH2AoK0f5_cAK" data-callback="showContact"></div>
     </div>
-    <div id = "contactID">
+    <div id = "contactID" style="display:none;">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Pittsburgh, PA</p>
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (408) 691-5279</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: sjw2@andrew.cmu.edu</p>
@@ -400,7 +400,7 @@ function resetYouTube(vidID){
 <script>
    function showContact(token) {
       alert("callback working");
-     document.getElementById("contactID").display = "none";
+     document.getElementById("contactID").display = "block";
    }
  </script>
 
