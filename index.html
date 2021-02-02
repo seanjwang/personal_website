@@ -151,8 +151,8 @@ body, html {
           <source src="drl_rough_terrain.mp4" type="video/mp4">
         </video>
         <p class="w3-large">Deep Reinforcement Learning for Rough Terrain Traversal</p>
-        <p> Autonomous driving over rough terrain is challenging due to the complexity of the robot's dynamics. Data-driven approaches can be used to create good control policies, but often need large amounts of training data. Collecting training data can be difficult as random exploration is time consuming and often leads to extensive robot damage. We aim to improve the sample efficiency of reinforcement learning through use of sim2real domain transfer, intelligent exploration, and other methods.</p>
-        <p> The video above shows rough terrain navigation using model-based reinforcement learning. The robot first trains a dynamics model, then uses it to optimize a trajectory to the goal. Trajectory tracking is done using LQR.</p>
+        <p class="w3-justify"> Autonomous driving over rough terrain is challenging. The robot experiences complex dynamics that are difficult to model accurately. Data-driven approaches for controls can be useful as they don't require dynamics to be hand modeled. However, reinforcement learning algorithms often require the robot to collect large amounts of training data through ε-greedy exploration. This process is time consuming and causes extensive damage to the robot. We aim to improve the sample efficiency of reinforcement learning through use of sim2real domain transfer, intelligent exploration, and other methods.</p>
+        <p class="w3-justify"> The video above shows rough terrain navigation using model-based reinforcement learning. The robot first trains a dynamics model using collected motion data. It then uses the dynamics model to optimize a trajectory to the goal. Once a trajectory to the goal is found, the robot tracks it using LQR.</p>
       </div>
     </div>
 
@@ -161,7 +161,7 @@ body, html {
         <video autoplay playsinline muted loop style="width:100%" preload="none">
           <source src="soilSampling_small.mp4" type="video/mp4">
         </video>
-        <p class="w3-large w3-center">Soil Sampling Robot Design</p>
+        <p class="w3-large w3-center">Soil Sampling Robot</p>
         <p class="w3-margin w3-justify"> We are designing and building robots that collect soil samples and measure soil contaminants to help us quantify the extent of contamination in large environments.</p>
         <p class="w3-center"> more info>> </p>
       </div>
@@ -173,8 +173,9 @@ body, html {
         <video id="soilSamplingVid" playsinline muted loop style="width:75%" preload="none">
           <source src="soilSampling.mp4" type="video/mp4">
         </video>
-        <p class="w3-large">Soil Sampling Robot Design</p>
-        <p> .</p>
+        <p class="w3-large">Soil Sampling Robot</p>
+        <p class="w3-justify"> Characterizing the extent of contamination is important for environmental remediation. The current method of contamination characterization involves workers hiking through large environments to collect soil samples for lab analysis. This method is time consuming and results in poor delineation. We aim to automate this process using soil sampling robots to collect more soil samples efficiently.</p>
+        <p class="w3-justify"> The video above shows a robot we are working on named "Patrick." Patrick is a tracked robot with soil collection mechanisms. We are currently developing new sensing methods to measure soil contamination in-situ.</p>
       </div>
     </div>
 
@@ -196,6 +197,9 @@ body, html {
           <source src="explorationPlanning.mp4" type="video/mp4">
         </video>
         <p class="w3-large">Planning for Environmental Sampling</p>
+        <p class="w3-justify"> Robotic soil sampling can help us understand the distribution of contaminants in an environment. However, the process can be time consuming and costly for larger environments. The robot must travel longer distances and collect more samples to gain a good understanding of the contaminant distribution. We aim to reduce the cost of information by having the robot intelligently select sampling locations that maximize information gain while minimizing operation costs.</p>
+        <p class="w3-justify"> The agent in the video above is using a greedy sampling algorithm. The robot estimates the distribution of contaminants in the environment by fitting a gaussian process to its previously collected measurements. It then selects its next sampling location by finding the location at which estimate entropy (information gain) is the highest. The figure on the left shows the true distribution, and the figure on the right shows information gain (estimate entropy) of different locations as the robot continues to sample. The figure at the end of the video shows the estimated contaminant distribution after the robot is done sampling.</p>
+        <p class="w3-justify"> We are currently working on non-greedy methods that optimize multiple future sampling locations instead of just the immediate next sampling location.</p>
       </div>
     </div>
   </div>
@@ -240,7 +244,7 @@ body, html {
           <source src="isla_small.mp4" type="video/mp4">
         </video>
         <p class="w3-large w3-center"> Isla</p>
-        <p class="w3-margin w3-justify"> Isla is a quadrupedal robot that can roll on its body for more efficient locomotion. In cluttered environments, it can step over small obstacles.</p>
+        <p class="w3-margin w3-justify"> Isla is a quadrupedal robot that can roll on its body for more efficient locomotion.</p>
         <p class="w3-center"> more info>> </p>
       </div>
     </div>
@@ -250,7 +254,7 @@ body, html {
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <iframe id='islaVideo'width="560" height="315" src="https://www.youtube.com/embed/AsHWz7wE1Rw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="w3-large">Isla</p>
-        <p> Legged robots have the ability to step over obstacles, making them well suited to rough terrain environments. However, they often have limited payload and travel range since their locomotion is less efficient than wheeled locomotion. Isla aims to capture the advantages of both legged and wheeled locomotion. It is able to and step over small obstacles. It can also roll on its body for efficient locomotion. 
+        <p class="w3-justify"> Legged robots have the ability to step over obstacles, making them well suited to rough terrain environments. However, they often have limited payload and travel range since their locomotion is less efficient than wheeled locomotion. Isla aims to capture the advantages of both legged and wheeled locomotion. It is able to and step over small obstacles. It can also roll on its body for efficient locomotion. 
       </div>
     </div>
 
