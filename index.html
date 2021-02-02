@@ -351,14 +351,10 @@ body, html {
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: sjw2@andrew.cmu.edu</p>
 </div>
 
-<form action="?" method="POST">
-      <div id="html_element"></div>
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="http://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
+<button class="g-recaptcha" 
+        data-sitekey="6Lf_VkcaAAAAAPirJ-FQVUN39_wFhhX9sj26qdvd" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -401,13 +397,14 @@ function resetYouTube(vidID){
 
 </script>
 
-<script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : 'your_site_key'
-        });
-      };
-    </script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("contactID").display = "none";
+   }
+ </script>
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 </body>
 </html>
