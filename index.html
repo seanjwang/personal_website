@@ -341,9 +341,6 @@ body, html {
   <div class="w3-hide-large w3-hide-medium"style="margin:auto;">
     <iframe src="https://bibbase.org/show?bib=seanjwang.github.io%2Freferences.bib" style="width: 100%;height:1000px" frameBorder="0"></iframe>
   </div>
-  <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-    <iframe src="https://bibbase.org/show?bib=seanjwang.github.io%2Freferences.bib" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameBorder="0"></iframe>
-  </div>
 </div>
 
 <!-- Contact Section -->
@@ -353,6 +350,15 @@ body, html {
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (408) 691-5279</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: sjw2@andrew.cmu.edu</p>
 </div>
+
+<form action="?" method="POST">
+      <div id="html_element"></div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="http://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -393,8 +399,15 @@ function resetYouTube(vidID){
   vidToReset.src = vidSrc;
 }
 
-
 </script>
+
+<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };
+    </script>
 
 </body>
 </html>
