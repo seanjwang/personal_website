@@ -394,16 +394,13 @@ function resetYouTube(vidID){
   vidToReset.src = '';
   vidToReset.src = vidSrc;
 }
+function showContact(token) {
+  alert("callback working");
+  document.getElementById("contactID").style.display = "block";
+  document.getElementById("contactCaptcha").style.display = "none";
+}
 
 </script>
-
-<script>
-   function showContact(token) {
-    alert("callback working");
-    document.getElementById("contactID").display = "block";
-    document.getElementById("contactCaptcha").display = "none";
-   }
- </script>
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6Lf_VkcaAAAAAPirJ-FQVUN39_wFhhX9sj26qdvd"></script>
