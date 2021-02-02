@@ -347,7 +347,7 @@ body, html {
 <div class="w3-container w3-center w3-light-grey" style="padding:64px 16px;" id="contact">
   <h3 class="w3-center">CONTACT</h3>
     <div style="text-align:center">
-      <div class="g-recaptcha" style="display:inline-block;" data-sitekey="6LeuY0caAAAAAC7sGwDPcoevCOEmH2AoK0f5_cAK" data-callback="showContact"></div>
+      <div id="contactCaptcha" class="g-recaptcha" style="display:inline-block;" data-sitekey="6LeuY0caAAAAAC7sGwDPcoevCOEmH2AoK0f5_cAK" data-callback="showContact"></div>
     </div>
     <div id = "contactID" style="display:none;">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Pittsburgh, PA</p>
@@ -399,8 +399,9 @@ function resetYouTube(vidID){
 
 <script>
    function showContact(token) {
-      alert("callback working");
-     document.getElementById("contactID").display = "block";
+    alert("callback working");
+    document.getElementById("contactID").display = "block";
+    document.getElementById("contactCaptcha").display = "none";
    }
  </script>
 
